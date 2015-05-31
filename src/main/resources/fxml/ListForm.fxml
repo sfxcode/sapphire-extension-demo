@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.sfxcode.sapphire.extension.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfxcode.sapphire.extension.demo.controller.form.ListFormController">
+    <children>
+      <HBox layoutX="26.0" layoutY="35.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TitledPane collapsible="false" prefHeight="319.0" prefWidth="374.0" text="List Form">
+               <content>
+                  <AnchorPane prefHeight="292.0" prefWidth="250.0">
+                     <children>
+                        <ComboBox fx:id="comboBox" layoutX="14.0" layoutY="22.0" prefWidth="150.0" />
+                        <DataListView fx:id="listView" layoutX="14.0" layoutY="71.0" prefHeight="200.0" prefWidth="334.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <DataListView fx:id="dataList" prefHeight="319.0" />
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>
