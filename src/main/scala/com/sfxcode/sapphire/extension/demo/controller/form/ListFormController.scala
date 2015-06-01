@@ -1,5 +1,6 @@
 package com.sfxcode.sapphire.extension.demo.controller.form
 
+import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.scene.control.ComboBox
 
@@ -15,6 +16,7 @@ import com.typesafe.scalalogging.LazyLogging
 import scalafx.Includes._
 import scalafx.beans.property.ObjectProperty
 import scalafx.collections.ObservableBuffer
+import scalafx.scene.input.MouseEvent
 
 class ListFormController extends AbstractBaseController with LazyLogging {
   
@@ -58,6 +60,14 @@ class ListFormController extends AbstractBaseController with LazyLogging {
 
     dataList.setItems(PersonDatabase.friends)
 
+    dataList.listView.onMouseClicked = (e: MouseEvent) => if (e.clickCount == 2) deleteSelected()
+  }
+
+  def deleteSelected() {
+    val selected = dataList.listView.getSelectionModel.getSelectedItems
+    selected.foreach(v => {
+      dataList.getItems.remove(v)
+    })
   }
 
   override def willGainVisibility(): Unit = {
@@ -69,6 +79,10 @@ class ListFormController extends AbstractBaseController with LazyLogging {
     logger.debug(personsMap(newValue).bean.friends.toString())
     listView.setItems(personsMap(newValue).bean.friends)
 
+  }
+
+  def actionResetList(event: ActionEvent) {
+    dataList.setItems(PersonDatabase.friends)
   }
 
 

@@ -6,7 +6,7 @@ import com.sfxcode.sapphire.core.Includes._
 import com.sfxcode.sapphire.core.value.FXBean
 import com.sfxcode.sapphire.extension.control.DualDataListView
 import com.sfxcode.sapphire.extension.demo.controller.AbstractBaseController
-import com.sfxcode.sapphire.extension.demo.model.Friend
+import com.sfxcode.sapphire.extension.demo.model.{PersonDatabase, Friend}
 import com.typesafe.scalalogging.LazyLogging
 
 import scalafx.beans.property.ObjectProperty
@@ -25,14 +25,8 @@ class DualListFormController extends AbstractBaseController with LazyLogging {
   var dualDataList: DualDataListView[R] = _
 
   override def didGainVisibilityFirstTime(): Unit = {
-
-    // update data list values
-   // dataList.cellProperty.set("Name: ${_self.name()} ID: ${_self.id()}")
-    //dataList.footerTextProperty.set("found %s values")
-
-    // add filter field
-    //val filter = new DataListFilter[R](dataList, PersonDatabase.friends, "name")
-
+    dualDataList.setItems(PersonDatabase.friends)
+    dualDataList.addFilter()
   }
 
   override def willGainVisibility(): Unit = {

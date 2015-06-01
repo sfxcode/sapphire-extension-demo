@@ -9,7 +9,7 @@
     <children>
       <HBox layoutX="26.0" layoutY="35.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <DualDataListView fx:id="dataList" prefHeight="319.0" />
+            <DualDataListView fx:id="dualDataList" prefHeight="319.0" />
          </children>
       </HBox>
     </children>
