@@ -23,7 +23,6 @@ class FormController extends AbstractBaseController {
 
   override def didGainVisibilityFirstTime() {
     super.didGainVisibilityFirstTime()
-
     val bindings = KeyBindings()
     bindings.add("person", "Person ${_self.name()} with age of ${_self.age()} is active: ${_self.isActive()}")
     adapter.addBindings(bindings)

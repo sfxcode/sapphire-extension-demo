@@ -10,7 +10,6 @@ import com.sfxcode.sapphire.core.value.FXBean
 import com.sfxcode.sapphire.extension.control.DataListView
 import com.sfxcode.sapphire.extension.demo.controller.AbstractBaseController
 import com.sfxcode.sapphire.extension.demo.model.{Friend, PersonDatabase}
-import com.sfxcode.sapphire.extension.filter.DataListFilter
 import com.typesafe.scalalogging.LazyLogging
 
 import scalafx.Includes._
@@ -56,7 +55,8 @@ class ListFormController extends AbstractBaseController with LazyLogging {
 
 
     // add filter field
-    val filter = new DataListFilter[R](dataList, "name")
+    // val filter = new DataListFilter[R](dataList, "name")
+    dataList.addFilter("name")
 
     dataList.setItems(PersonDatabase.friends)
 
@@ -66,7 +66,7 @@ class ListFormController extends AbstractBaseController with LazyLogging {
   def deleteSelected() {
     val selected = dataList.listView.getSelectionModel.getSelectedItems
     selected.foreach(v => {
-      dataList.getItems.remove(v)
+      dataList.remove(v)
     })
   }
 
