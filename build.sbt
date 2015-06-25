@@ -2,13 +2,13 @@ name := "sapphire-extension-demo"
 
 organization := "com.sfxcode.sapphire"
 
-version := "0.4.1-SNAPSHOT"
+version := "0.4.3-SNAPSHOT"
 
-scalaVersion := "2.11.6"
+scalaVersion := "2.11.7"
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
-scalacOptions += "-target:jvm-1.7"
+scalacOptions += "-target:jvm-1.8"
 
 mainClass := Some("com.sfxcode.sapphire.extension.demo.Application")
 
@@ -19,9 +19,8 @@ resolvers ++= Seq(
 )
 
 
-libraryDependencies ++= Seq(
-  "org.specs2" %% "specs2" % "3.3.1" % "test"
-)
+libraryDependencies += "org.specs2" %% "specs2-core" % "3.6.1" % "test"
+
 
 libraryDependencies += "org.json4s" %% "json4s-native" % "3.2.11"
 

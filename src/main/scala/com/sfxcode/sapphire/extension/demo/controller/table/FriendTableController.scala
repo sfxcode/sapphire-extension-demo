@@ -1,6 +1,7 @@
 package com.sfxcode.sapphire.extension.demo.controller.table
 
 import com.sfxcode.sapphire.extension.demo.model.{Friend, PersonDatabase}
+import com.sfxcode.sapphire.core.Includes._
 
 import scala.reflect._
 

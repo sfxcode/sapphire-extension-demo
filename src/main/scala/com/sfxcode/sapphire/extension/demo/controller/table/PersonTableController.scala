@@ -2,6 +2,7 @@ package com.sfxcode.sapphire.extension.demo.controller.table
 
 import com.sfxcode.sapphire.extension.demo.model.{Person, PersonDatabase}
 import com.sfxcode.sapphire.extension.filter.DataTableFilter
+import com.sfxcode.sapphire.core.Includes._
 
 import scala.reflect._
 
