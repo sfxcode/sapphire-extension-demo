@@ -6,6 +6,7 @@ import javax.inject.Named
 import com.sfxcode.sapphire.core.cdi.FXApp
 import com.sfxcode.sapphire.core.controller.AppController
 import com.sfxcode.sapphire.extension.demo.controller.MainWindowController
+import com.sfxcode.sapphire.extension.scene.ExtensionResolver
 import com.typesafe.scalalogging.LazyLogging
 
 import scalafx.application.JFXApp.PrimaryStage
@@ -14,6 +15,7 @@ import scalafx.stage.Stage
 
 
 object Application extends FXApp {
+  ExtensionResolver.add()
 
   override def applicationStage:Stage  = new PrimaryStage {
     title = "Sapphire Form Demo"

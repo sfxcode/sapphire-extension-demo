@@ -3,7 +3,7 @@ package com.sfxcode.sapphire.extension.demo.controller.navigation
 import javafx.event.ActionEvent
 
 import com.sfxcode.sapphire.extension.demo.controller.AbstractBaseController
-import com.sfxcode.sapphire.extension.demo.controller.form.{DualListFormController, FormController, ListFormController, PropertiesFormController}
+import com.sfxcode.sapphire.extension.demo.controller.form._
 import com.sfxcode.sapphire.extension.demo.controller.table.{FriendTableController, PersonTableController}
 
 class DefaultNavigationController extends AbstractBaseController {
@@ -11,6 +11,7 @@ class DefaultNavigationController extends AbstractBaseController {
   lazy val propertiesFormController = getController[PropertiesFormController]()
   lazy val listFormController = getController[ListFormController]()
   lazy val dualListFormController = getController[DualListFormController]()
+  lazy val extensionFormController = getController[ExtensionFormController]()
 
 
   def actionShowForm(event: ActionEvent) {
@@ -26,6 +27,10 @@ class DefaultNavigationController extends AbstractBaseController {
 
   def actionShowPropertiesForm(event: ActionEvent) {
     workspaceManager.updatePaneContent(propertiesFormController)
+  }
+
+  def actionShowExtensionForm(event: ActionEvent) {
+    workspaceManager.updatePaneContent(extensionFormController)
   }
 
 
