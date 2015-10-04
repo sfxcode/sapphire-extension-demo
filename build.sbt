@@ -2,7 +2,7 @@ name := "sapphire-extension-demo"
 
 organization := "com.sfxcode.sapphire"
 
-version := "0.4.3-SNAPSHOT"
+version := "0.4.5"
 
 scalaVersion := "2.11.7"
 
@@ -19,8 +19,9 @@ resolvers ++= Seq(
 )
 
 
-libraryDependencies += "org.specs2" %% "specs2-core" % "3.6.1" % "test"
+libraryDependencies += "org.specs2" %% "specs2-core" % "3.6.4" % "test"
 
+libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-extension" % "0.4.5"
 
 libraryDependencies += "org.json4s" %% "json4s-native" % "3.2.11"
 
