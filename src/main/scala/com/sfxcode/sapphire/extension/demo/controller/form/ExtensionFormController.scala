@@ -33,7 +33,7 @@ class ExtensionFormController extends AbstractBaseController {
 
   override def didGainVisibility() {
     super.didGainVisibility()
-    formAdapter.set(Some(FXBean[BookRating](BookRating(3, "Book", 3, 250))))
+    formAdapter.beanProperty.value = FXBean[BookRating](BookRating(3, "Book", 3, 250))
   }
 
 }

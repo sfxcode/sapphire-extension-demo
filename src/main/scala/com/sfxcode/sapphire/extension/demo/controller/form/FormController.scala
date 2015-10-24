@@ -48,8 +48,8 @@ class FormController extends AbstractBaseController {
 
   def setRandomPerson(): Unit = {
     val person: FXBean[Person] = PersonDatabase.testPerson(random.nextInt(100))
-    formAdapter.set(Some(person))
-    adapter.set(Some(person))
+    formAdapter.beanProperty.value = person
+    adapter.beanProperty.value = person
   }
 
 }
