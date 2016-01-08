@@ -2,6 +2,7 @@ package com.sfxcode.sapphire.extension.demo.controller
 
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
+import javafx.scene.control.MenuBar
 import javafx.scene.layout.{AnchorPane, HBox}
 
 import com.sfxcode.sapphire.core.controller.ViewController
@@ -12,6 +13,9 @@ import org.controlsfx.control.StatusBar
 import scalafx.Includes._
 
 class MainWindowController extends ViewController{
+  @FXML
+  var menuBar: MenuBar = _
+
   @FXML
   var workspacePane: AnchorPane = _
 
@@ -30,6 +34,8 @@ class MainWindowController extends ViewController{
 
   override def didGainVisibilityFirstTime() {
     val startLoading = System.currentTimeMillis()
+
+    menuBar.setUseSystemMenuBar(true)
 
     navigationManager = ContentManager(navigationBox, this, defaultNavigationController)
     workspaceManager = ContentManager(workspacePane, this, welcomeController)

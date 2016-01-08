@@ -26,7 +26,6 @@ class DualListFormController extends AbstractBaseController with LazyLogging {
 
   override def didGainVisibilityFirstTime(): Unit = {
     dualDataList.setItems(PersonDatabase.friends)
-    dualDataList.addFilter()
   }
 
   override def willGainVisibility(): Unit = {

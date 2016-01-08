@@ -5,7 +5,6 @@ import javafx.fxml.FXML
 import javafx.scene.control.ComboBox
 
 import com.sfxcode.sapphire.core.Includes._
-import com.sfxcode.sapphire.core.control.FXListCellFactory
 import com.sfxcode.sapphire.core.value.FXBean
 import com.sfxcode.sapphire.extension.control.DataListView
 import com.sfxcode.sapphire.extension.demo.controller.AbstractBaseController
@@ -43,23 +42,19 @@ class ListFormController extends AbstractBaseController with LazyLogging {
   override def didGainVisibilityFirstTime(): Unit = {
     comboBox.getSelectionModel.selectedItemProperty.onChange((_, _, newValue) => comboBoxDidChange(newValue))
     comboBox.setItems(buffer)
+
+    listView.cellProperty.set("Name: ${_self.name()} (${_self.id()})")
+    listView.showHeader.set(false)
+    listView.showFooter.set(true)
+    listView.footerTextProperty.set("found %s friends")
+
     comboBox.getSelectionModel.selectFirst()
 
-    listView.showFooter.set(true)
-    listView.listView.setCellFactory(FXListCellFactory[R]("Name: ${_self.name()} ID: ${_self.id()}"))
-
     // update data list values
-    dataList.showFooter.set(true)
     dataList.cellProperty.set("Name: ${_self.name()} ID: ${_self.id()}")
-    dataList.footerTextProperty.set("found %s values")
-
-
-    // add filter field
-    // val filter = new DataListFilter[R](dataList, "name")
-    dataList.addFilter("name")
+    dataList.filterPromptProperty.set("Name")
 
     dataList.setItems(PersonDatabase.friends)
-
     dataList.listView.onMouseClicked = (e: MouseEvent) => if (e.clickCount == 2) deleteSelected()
   }
 
