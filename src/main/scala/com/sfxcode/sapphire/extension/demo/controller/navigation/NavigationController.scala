@@ -12,6 +12,7 @@ class DefaultNavigationController extends AbstractBaseController {
   lazy val listFormController = getController[ListFormController]()
   lazy val dualListFormController = getController[DualListFormController]()
   lazy val extensionFormController = getController[ExtensionFormController]()
+  lazy val iconFontController = getController[IconFontController]()
 
 
   def actionShowForm(event: ActionEvent) {
@@ -31,6 +32,10 @@ class DefaultNavigationController extends AbstractBaseController {
 
   def actionShowExtensionForm(event: ActionEvent) {
     workspaceManager.updatePaneContent(extensionFormController)
+  }
+
+  def actionShowIcons(event: ActionEvent) {
+    workspaceManager.updatePaneContent(iconFontController)
   }
 
 
