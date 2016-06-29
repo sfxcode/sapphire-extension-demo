@@ -12,7 +12,7 @@ class PersonTableController extends AbstractTableViewController {
 
   def ct =  classTag[R]
 
-  def items =  PersonDatabase.persons
+  def items =  PersonDatabase.bigPersonTable
 
   override def initTable(tableFilter: DataTableFilter[R]): Unit = {
     super.initTable(tableFilter)

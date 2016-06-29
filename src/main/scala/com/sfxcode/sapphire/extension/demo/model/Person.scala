@@ -7,6 +7,7 @@ import com.sfxcode.sapphire.core.value.FXBean
 import org.json4s.DefaultFormats
 import org.json4s.native.Serialization._
 
+import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
 
 
@@ -39,6 +40,14 @@ object PersonDatabase  {
   }
 
   val persons = read[List[Person]](fromJson("/data.json"))
+
+  val bigPersonTable = {
+    var result = ArrayBuffer[Person]()
+    (1 to 25).foreach(i => {
+      result.++=(persons)
+    })
+    result.toList
+  }
 
   val friends = persons(2).friends
 
