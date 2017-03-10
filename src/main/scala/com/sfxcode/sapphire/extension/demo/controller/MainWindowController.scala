@@ -50,7 +50,7 @@ class MainWindowController extends ViewController{
 
   def actionShowTables(event: ActionEvent) {
     navigationManager.updatePaneContent(tableNavigationController)
-    workspaceManager.updatePaneContent(tableNavigationController.personTableController)
+    workspaceManager.updatePaneContent(tableNavigationController.simplePersonTableController)
 
 
   }

@@ -15,6 +15,7 @@ case class Person(
                     id:Long,
                     guid:String,
                     isActive:Boolean,
+                    company:String,
                     balance:Double,
                     picture:String,
                     var age:Int,

@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
-<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
 <?import de.jensd.fx.glyphs.weathericons.WeatherIconView?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfxcode.sapphire.extension.demo.controller.form.IconFontController">
-    <children>
-      <FontAwesomeIconView glyphName="GOOGLE" glyphStyle=" -fx-fill: #0057e7" layoutX="44.0" layoutY="99.0" size="36" />
-      <MaterialDesignIconView glyphStyle="-fx-fill: linear-gradient(#70b4e5 0%, #247cbc 70%, #2c85c1 85%);" layoutX="113.0" layoutY="99.0" size="36" />
-      <OctIconView glyphStyle=" -fx-fill: yellowgreen;" layoutX="192.0" layoutY="97.0" size="36" />
-      <WeatherIconView glyphStyle="-fx-fill: linear-gradient(#ffffff, #d2d2d2);" layoutX="281.0" layoutY="98.0" size="36" />
-    </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfxcode.sapphire.extension.demo.controller.form.IconFontController">
+   <children>
+      <HBox layoutX="46.0" layoutY="45.0" prefHeight="400.0" prefWidth="600.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <WeatherIconView fill="#7b7ec9" size="24" />
+            <MaterialIconView glyphName="ALBUM" size="30" />
+            <MaterialDesignIconView fill="#2a849a" glyphName="SHOP_TWO" size="24" text="" />
+            <EmojiOneView fill="#ff802b" size="48" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" right="20.0" top="20.0" />
+         </padding></HBox>
+   </children>
 </AnchorPane>

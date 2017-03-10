@@ -11,8 +11,8 @@
     <children>
         <Button mnemonicParsing="false" onAction="#actionShowForm" text="Default Form"/>
         <Button mnemonicParsing="false" onAction="#actionShowPropertiesForm" text="Properties Form"/>
-        <Button mnemonicParsing="false" onAction="#actionShowListForm" text="List Form"/>
-        <Button mnemonicParsing="false" onAction="#actionShowDualListForm" text="Dual List Form"/>
+        <Button mnemonicParsing="false" onAction="#actionShowListForm" text="Data List Form"/>
+        <Button mnemonicParsing="false" onAction="#actionShowDualListForm" text="Dual Data List Form"/>
         <Button mnemonicParsing="false" onAction="#actionShowExtensionForm" text="Extension Form"/>
         <Button mnemonicParsing="false" onAction="#actionShowIcons" text="Icon View"/>
     </children>
