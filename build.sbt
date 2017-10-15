@@ -2,9 +2,9 @@ name := "sapphire-extension-demo"
 
 organization := "com.sfxcode.sapphire"
 
-version := "0.6.1"
+version := "0.6.3"
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.12.3"
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
@@ -26,9 +26,9 @@ resolvers += "bintray" at "https://jcenter.bintray.com"
 
 
 
-libraryDependencies += "org.specs2" %% "specs2-core" % "3.9.2" % "test"
+libraryDependencies += "org.specs2" %% "specs2-core" % "4.0.1" % "test"
 
-libraryDependencies += "org.json4s" %% "json4s-native" % "3.5.2"
+libraryDependencies += "org.json4s" %% "json4s-native" % "3.5.3"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 
